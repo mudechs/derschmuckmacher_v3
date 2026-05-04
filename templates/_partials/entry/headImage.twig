@@ -1,0 +1,7 @@
+{% set headbild = entry.bild.one() %}
+
+{% if headbild %}
+  <div class="headimage">
+    <div class="overlay" style="background: url('{{ headbild.getUrl() }}') no-repeat center; background-size: cover;"></div>
+  </div>
+{% endif %}

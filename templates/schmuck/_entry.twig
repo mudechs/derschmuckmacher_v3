@@ -1,0 +1,102 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="container py-4 py-md-5">
+      <div class="row">
+        <div class="col-md-5{{ isMobile ? ' mb-4' }}">
+          {% set typ = entry.typ.one() %}
+          {% set steinsorten = entry.steinsorte.all() %}
+          {% set steinsortenIds = entry.steinsorte.ids() %}
+
+          {% set image = entry.schmuckbild.one() %}
+          {% set thumb = {
+            mode: 'crop',
+            width: 1224,
+            height: 1224,
+            quality: 90,
+            position: 'center-center'
+          } %}
+
+          {% if image|length %}
+            <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+          {% else %}
+            <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+          {% endif %}
+
+        </div>
+        <div class="col-md-7 ps-lg-5">
+          <h1>{{ entry.title }}</h1>
+          {{ entry.beschreibung }}
+
+          <div class="row mt-4">
+            <div class="col-md-8">
+              <table class="table table-sm table-borderless m-0" style="--bs-table-bg: transparent;">
+                <tbody>
+                <tr>
+                  <th class="ps-0">Ref-Nr:</th>
+                  <td>{{ entry.id }}</td>
+                </tr>
+                {#<tr>
+                  <th>Status:</th>
+                  <td>{{ entry.verkaufsstatus }}</td>
+                </tr>#}
+                <tr>
+                  <th class="ps-0">Kategorie:</th>
+                  <td>{{ typ }}</td>
+                </tr>
+                <tr>
+                  <th class="ps-0">Steinsorte{{ steinsorten|length > 1 ? 'n' }}:</th>
+                  <td>
+                    <ul class="list-unstyled m-0">
+                      {% for steinsorte in steinsorten %}
+                        <li>{{ steinsorte.title }}</li>
+                      {% endfor %}
+                    </ul>
+
+                  </td>
+                </tr>
+                {% if entry.grundmaterial|length %}
+                  <tr>
+                    <th class="ps-0">Grundmaterial:</th>
+                    <td>{{ entry.grundmaterial }}</td>
+                  </tr>
+                {% endif %}
+                <tr>
+                  <th class="ps-0">Preis:</th>
+                  <td>{{ entry.preis|currency('CHF') }}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {#{% set canReservate = false %}
+          {% set hasReservation = false %}
+          {% set hasReservation = entry.reservation.one() %}
+
+          {% if hasReservation|length %}
+            {% set hasReservation = true %}
+          {% endif %}
+
+          {% if entry.qty >= 1 and entry.verkaufsstatus == 'Verfügbar' and entry.status == 'live' and hasReservation == false %}
+            {% set canReservate = true %}
+          {% endif %}
+
+          {% if canReservate %}
+            {% include "_includes/reservation_modal.twig" %}
+          {% endif %}#}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ sprig('_components/similar', {
+    id: entry.id,
+    typId: typ.id,
+    steinsorteIds: steinsortenIds ?? null,
+    verkaufsstatusValue: 'Verfügbar',
+    indicator: 'similarIndicator'
+  }, {'id': 'similar', 's-trigger': 'load, refresh', 's-indicator': '#similarIndicator'}) }}
+
+{% endblock %}

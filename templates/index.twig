@@ -1,0 +1,113 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+  <div class="bg-image vh-100">
+    <div class="overlay z-1"></div>
+
+    {# {% include "_includes/header_homepage.twig" %} #}
+    {% include "_includes/homepage_logo.twig" %}
+
+  </div>
+
+  <div class="py-3 py-lg-5"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-1 col-lg-8 offset-lg-2 py-5">
+        <h1 class="display-1 mb-5">Schmuck entsteht aus<br>Zeit und Handwerk.</h1>
+        <div class="cta-responsive">
+          <a href="{{ alias('@web/schmuck') }}" class="btn btn-lg btn-primary py-3 px-4 viewport-toggle">Schmuckstücke entdecken</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-3 py-lg-5"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="row">
+          <div class="col-12 col-lg-4 d-lg-flex justify-content-start">
+            <div>
+              <img src="https://placehold.co/800x600?text=Bild" alt="" class="img-fluid">
+              <div class="p-5">
+                <h2 class="display-6">Jedes Stück ein Unikat</h2>
+                <p class="mb-5">Jedes Schmuckstück entsteht einmal für einen bestimmten Menschen.</p>
+                <div class="col-12 col-lg-6">
+                  <a href="{{ alias('@web/schmuck') }}" class="btn btn-lg btn-primary py-3 px-4 viewport-toggle d-block">Schmuckstücke</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 d-lg-flex justify-content-center">
+            <div>
+              <img src="https://placehold.co/800x600?text=Bild" alt="" class="img-fluid">
+              <div class="p-5">
+                <h2 class="display-6">Der Schmuckmacher</h2>
+                <p class="mb-5">Ein Einblick in mein Atelier und Handwerk.</p>
+                <div class="col-12 col-lg-6">
+                  <a href="{{ alias('@web/ueber-mich') }}" class="btn btn-lg btn-primary py-3 px-4 viewport-toggle d-block">zum Atelier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 d-lg-flex justify-content-end">
+            <div>
+              <img src="https://placehold.co/800x600?text=Bild" alt="" class="img-fluid">
+              <div class="p-5">
+                <h2 class="display-6">Schmuck entsteht im Dialog</h2>
+                <p class="mb-5">Ein Unikat beginnt mit einem persönlichen Gespräch.</p>
+                <div class="col-12 col-lg-6">
+                  <a href="{{ alias('@web/kontakt') }}" class="btn btn-lg btn-primary py-3 px-4 viewport-toggle d-block">Kontakt</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% set latestNews = craft.entries()
+    .section('aktuelles')
+    .status('live')
+    .aufStartseiteZeigen(true)
+    .orderBy('postDate desc')
+    .one() %}
+
+  {% if latestNews %}
+    <div class="py-3 py-lg-5"></div>
+
+    {% set bgImage = latestNews.bild.one() %}
+    {% set textColor = latestNews.textfarbe %}
+
+    <a href="{{ latestNews.url }}" class="text-decoration-none d-block">
+      <div class="container-fluid bg-blur" style="background-image: url('{{ bgImage.getUrl() }}'); cursor: pointer;">
+        <div class="row">
+          <div class="col-10 col-lg-8 offset-1 offset-lg-2" style="padding: 200px 0;">
+            <h2 class="display-2 mb-0" {% if textColor %}style="color: {{ textColor }};"{% endif %}>
+              {{ latestNews.title }}
+            </h2>
+            <p class="display-2 mb-0" {% if textColor %}style="color: {{ textColor }};"{% endif %}>
+              {{ latestNews.zeile2 }}<br>
+              {{ latestNews.zeile3 }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  {% endif %}
+
+  {# <div class="container-fluid latest-homepage">
+    <div class="container py-5">
+      <div class="title-box pb-3">
+        <h3 class="m-0 text-nowrap">Neueste Stücke</h3>
+      </div>
+
+      {{ sprig('_components/latest', {
+        indicator: 'latestIndicator'
+      }, {'id': 'latest', 's-trigger': 'load, refresh', 's-indicator': '#latestIndicator'}) }}
+    </div>
+  </div> #}
+{% endblock %}

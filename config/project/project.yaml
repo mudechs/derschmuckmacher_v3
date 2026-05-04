@@ -1,0 +1,335 @@
+dateModified: 1777539466
+elementSources:
+  craft\elements\Asset:
+    -
+      disabled: false
+      key: 'volume:1986f3e0-bf2e-4ccd-b34c-7ec2d979afdd' # Schmuck
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - link
+      type: native
+    -
+      key: 'folder:8efede2b-4636-4d4e-a0ae-47ee4dee27ac'
+      type: native
+  craft\elements\Category:
+    -
+      disabled: false
+      key: 'group:1fa69461-9d0e-4b99-bcc2-2d2940c77328' # Schmuck-Typ
+      tableAttributes:
+        - slug
+        - link
+      type: native
+    -
+      disabled: false
+      key: 'group:190eec8d-868e-427e-af52-66efcf0dfbc9' # Steinsorten
+      tableAttributes:
+        - id
+        - slug
+        - link
+      type: native
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      page: Entries
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      disabled: false
+      key: singles
+      page: Entries
+      tableAttributes:
+        - slug
+        - postDate
+        - link
+      type: native
+    -
+      heading: Kanäle
+      key: 'heading:a07ae4d9-8d99-4536-83a4-847e629198b1'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:c2de3b35-f1cb-4deb-a326-cdbf598adb19' # Schmuck
+      page: Entries
+      tableAttributes:
+        - 'field:909b8447-f196-4f58-b085-e28f384e471e' # Schmuckbild
+        - id
+        - 'field:865716c6-6444-4402-a21c-8feb6ae320de' # QTY
+        - 'field:2147c58d-04d1-4b0a-9657-8caedb130935' # Preis
+        - 'field:672200c4-d5dc-4fe9-9315-db44b7f01aa1' # Typ
+        - 'field:db76f042-b183-43a3-9a2d-52f01a0a0e93' # Steinsorte
+        - 'field:d09d18d6-aec2-4660-a131-4c532c32573b' # Reservation
+        - 'field:50eb4166-7047-4cff-8492-548477dfe9dd' # Verkaufsstatus
+        - postDate
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:abbf7c18-fd88-4baf-9a5e-dbccf55f4b56' # Aktuelles
+      page: Entries
+      tableAttributes:
+        - slug
+        - 'field:b3a4a7b7-2e06-4652-949e-63cdd2941c2d' # Auf Startseite zeigen
+        - postDate
+        - expiryDate
+        - link
+      type: native
+email:
+  fromEmail: info@derschmuckmacher.ch
+  fromName: derschmuckmacher.ch
+  replyToEmail: info@derschmuckmacher.ch
+  template: ''
+  transportSettings:
+    command: '/usr/sbin/sendmail -bs'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  bilder:
+    hasUrls: true
+    name: Bilder
+    settings:
+      path: $BILDER_BASE_PATH
+    type: craft\fs\Local
+    url: $BILDER_BASE_URL
+  schmuck:
+    hasUrls: true
+    name: Schmuck
+    settings:
+      path: $SCHMUCK_BASE_PATH
+    type: craft\fs\Local
+    url: $SCHMUCK_BASE_URL
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+meta:
+  __names__:
+    0b0764ba-028f-4e9a-912a-86e4057ed5e5: 'Public Schema' # Public Schema
+    1e33faf0-6dcc-47df-a77d-96da095a58be: Kacheln # Kacheln
+    1fa69461-9d0e-4b99-bcc2-2d2940c77328: Schmuck-Typ # Schmuck-Typ
+    2c33a6f3-912d-485d-85c6-7744ccdcee91: SEO # SEO
+    2ddd2472-c739-4d57-bc49-39e3ffe71e22: Lead # Lead
+    2fe36c5a-f461-4c6f-9aff-d080d1eea1f4: Homepage # Homepage
+    5e61dcef-f6ae-4afa-b05a-49814231e6ef: Bild # Bild
+    6b52062b-39e4-436b-9bb0-a6c9e38b2147: Head-Bild # Head-Bild
+    6e94798d-557b-4c6c-b953-bb5bcf2e4360: Matrix # Matrix
+    22e57b48-47ad-45b8-8b58-bd90cbeca5d6: Kachel # Kachel
+    025c902d-9eb8-4acb-ad3d-dbc5c6a7a967: 'Über mich' # Über mich
+    50eb4166-7047-4cff-8492-548477dfe9dd: Verkaufsstatus # Verkaufsstatus
+    55a6fad2-e8ea-482b-8609-0386f139aea2: Headbild # Headbild
+    94b58dd0-93fe-437c-ba74-d026ede98964: Grundmaterial # Grundmaterial
+    190eec8d-868e-427e-af52-66efcf0dfbc9: Steinsorten # Steinsorten
+    546ff85b-d6cb-437e-bfad-24298a8aa541: Datenschutz # Datenschutz
+    623b95ce-1ce3-45b0-9a11-a18f48f684b8: Farbe # Farbe
+    666f4a13-e1c9-47b9-af73-1d7e7789dea8: 'Alte ID' # Alte ID
+    856a3aeb-b21b-4d41-af3f-0a23db430323: Bilder # Bilder
+    909b8447-f196-4f58-b085-e28f384e471e: Schmuckbild # Schmuckbild
+    1986f3e0-bf2e-4ccd-b34c-7ec2d979afdd: Schmuck # Schmuck
+    2147c58d-04d1-4b0a-9657-8caedb130935: Preis # Preis
+    2480ed87-7a1b-4d13-969d-d40e69e3750b: Standard # Standard
+    5054e9bf-72d8-4a7e-884b-6180592ab3dd: Impressum # Impressum
+    35942a3c-f1eb-46ad-8339-bf03c5c1d2ed: Buttonlink # Buttonlink
+    64589d79-d465-462e-9c84-073e23e946ac: derschmuckmacher.ch # derschmuckmacher.ch
+    194263f9-fcd7-48d8-9409-1bb74c20e0f6: Impressum # Impressum
+    672200c4-d5dc-4fe9-9315-db44b7f01aa1: Typ # Typ
+    865716c6-6444-4402-a21c-8feb6ae320de: QTY # QTY
+    82025346-993e-4a4b-be19-9cddb0e41591: Spacer # Spacer
+    82823828-5649-4051-b06d-c122d5bc5763: derschmuckmacher.ch # derschmuckmacher.ch
+    aab84915-b0f0-47a5-a8b9-e63d4ce1b18e: 'Fullscreen Bild' # Fullscreen Bild
+    abbf7c18-fd88-4baf-9a5e-dbccf55f4b56: Aktuelles # Aktuelles
+    ac2ed723-6040-4158-b870-dc769b58b9e4: Text # Text
+    b3a4a7b7-2e06-4652-949e-63cdd2941c2d: 'Auf Startseite zeigen' # Auf Startseite zeigen
+    b3feb430-6f64-4f81-9110-fe29fe83877b: Beschreibung # Beschreibung
+    b7a326d8-5d52-4db8-bf69-991e2f9e1c0b: 'Matrix - Text - Body' # Matrix - Text - Body
+    b1312f5f-cafe-4866-bf92-60ac0b3fb7f4: Kontakt # Kontakt
+    bd901d74-2d69-42d8-b8e6-09c9f6d1945d: Kacheln # Kacheln
+    c2de3b35-f1cb-4deb-a326-cdbf598adb19: Schmuck # Schmuck
+    c9fa7957-6e39-49ea-9658-2558079618cb: Kontakt # Kontakt
+    c10dd50f-48c4-4b9a-9398-d5d1d576d4a7: Haupttitel # Haupttitel
+    caa348b0-f199-4ab4-bb1d-24723629b1c4: Schmuckstücke # Schmuckstücke
+    cf3a73aa-ee21-4da1-90ed-e13651ad6f09: Multicontent # Multicontent
+    d09d18d6-aec2-4660-a131-4c532c32573b: Reservation # Reservation
+    db76f042-b183-43a3-9a2d-52f01a0a0e93: Steinsorte # Steinsorte
+    f21dfb17-64c2-4fe0-87dc-82cd85a1b144: Standard # Standard
+    fd7dfe3e-de02-4a2b-b80f-e016cbc6bd83: Datenschutz # Datenschutz
+    ff6a7fd9-40d5-4aeb-8e90-710a4de8d92d: 'Latest News' # Latest News
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
+  cookie-consent-banner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.4
+    settings:
+      allow: 'Cookies zulassen'
+      async_js: ''
+      auto_inject: '1'
+      decline: Ablehnen
+      defer_js: ''
+      disable_in_live_preview: ''
+      dismiss: OK
+      dismiss_on_scroll: '0'
+      dismiss_on_timeout: '0'
+      excluded_categories: null
+      excluded_entry_types: null
+      expiry_days: '365'
+      honour_do_not_track_header: ''
+      layout: block
+      learn: Datenschutz
+      learn_more_link: 'https://dev.derschmuckmacher.ch/datenschutz'
+      message: 'Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzung unserer Website zu ermöglichen.'
+      palette: cleanblue
+      palette_banner: '252e39'
+      palette_banner_text: ffffff
+      palette_button: D9544F
+      palette_button_text: ffffff
+      palette_left_button_bg: D9544F
+      palette_left_button_text: ffffff
+      palette_link: ffffff
+      position: bottom-right
+      preload_css: ''
+      revokable: ''
+      secure_only: ''
+      target: _blank
+      type: info
+  feed-me:
+    edition: standard
+    enabled: false
+    schemaVersion: 4.4.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: 2XI93XCMC0HAGV7SRYV91FQ2
+    schemaVersion: 5.15.1
+    settings:
+      ajaxByDefault: '1'
+      alertNotificationRecipients: null
+      allowFileTemplateEdit: '1'
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: '1'
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDefault: files
+      emailTemplateDirectory: _freeform_emails/
+      emailTemplateMethod: global
+      emailTemplateStorageType: files_database
+      exportHandlesAsNames: ''
+      exportLabels: ''
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: ''
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: null
+      formattingTemplate: bootstrap-5.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: Formulare
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: '1'
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: $CAPTCHA_SITE_KEY
+      recaptchaLazyLoad: '1'
+      recaptchaMinScore: '0.5'
+      recaptchaSecret: $CAPTCHA_SECRET_KEY
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v3
+      rememberPageSubmitOrder: true
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: ''
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: _freeform_success
+      twigInHtml: '1'
+      twigInHtmlIsolatedMode: '1'
+      updateSearchIndexes: '1'
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: false
+    schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+system:
+  edition: pro
+  live: true
+  name: Schmuckmacher
+  retryDuration: null
+  schemaVersion: 5.9.0.8
+  timeZone: $TIMEZONE
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

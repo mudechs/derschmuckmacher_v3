@@ -1,0 +1,22 @@
+columnSuffix: rrbswfnw
+contentColumnType: string
+handle: reservation
+instructions: null
+name: Reservation
+searchable: true
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'form:1'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: Solspace\Freeform\FieldTypes\SubmissionFieldType

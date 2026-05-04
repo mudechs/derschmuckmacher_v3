@@ -1,0 +1,86 @@
+{% extends "administration/_layouts/main.twig" %}
+
+{% import 'administration/_macros/schmuck.twig' as schmuck %}
+
+{% block content %}
+  {% set query = craft.entries()
+    .section('schmuck')
+    .reservation(':notempty:')
+    .verkaufsstatus('not Verkauft')
+  %}
+
+  {% set entries = query.all() %}
+
+  {% if entries %}
+    <div class="container py-3">
+      <div class="row mt-3">
+        {% for entry in entries %}
+          {% set reservation = entry.reservation.one() %}
+
+          <div class="col-md-4">
+            <div class="card rounded shadow">
+
+              <div class="card-body">
+                <div class="text-center my-3">
+                  {% set image = entry.bild.one() %}
+                  {% set thumb = {
+                    mode: 'crop',
+                    width: 120,
+                    height: 120,
+                    quality: 100,
+                    position: 'center-center'
+                  } %}
+
+                  {% if image|length %}
+                    <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid rounded-circle">
+                  {% else %}
+                    <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid rounded-circle">
+                  {% endif %}
+                </div>
+
+                <table class="table table-borderless">
+                  <tbody>
+                  <tr>
+                    <th>Artikel:</th>
+                    <td>{{ entry.title }} (#{{ entry.id }})</td>
+                  </tr>
+                  <tr>
+                    <th>Res-ID:</th>
+                    <td>{{ reservation.id }}</td>
+                  </tr>
+                  <tr>
+                    <th>Datum:</th>
+                    <td>{{ reservation.dateCreated|date('d.m.Y (H:i)') }}</td>
+                  </tr>
+                  <tr>
+                    <th>Kunde:</th>
+                    <td>
+                      {{ reservation.firstName }} {{ reservation.lastName }}<br>
+                      {{ reservation.cellPhone }}<br>
+                      <a href="mailto:{{ reservation.email }}">{{ reservation.email }}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      {{ reservation.message }}
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <div class="d-flex justify-content-between mt-5">
+                  {{ schmuck.setSold(entry) }}
+                  {{ schmuck.cancelReservation(entry) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <div class="container py-5">
+      <p>Keine reservierten Schmuckstücke gefunden...</p>
+    </div>
+  {% endif %}
+{% endblock %}

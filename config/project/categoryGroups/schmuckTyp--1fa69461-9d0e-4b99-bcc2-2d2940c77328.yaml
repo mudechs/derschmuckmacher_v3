@@ -1,0 +1,46 @@
+defaultPlacement: beginning
+fieldLayouts:
+  36304947-5957-4e6d-a2ec-976816de4fe9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 4db41f3f-de68-4fa6-b2f2-47ba6c6f6067
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 1598e55c-428e-45d2-a9ca-77a5e7c4b297
+        userCondition: null
+handle: schmuckTyp
+name: Schmuck-Typ
+siteSettings:
+  64589d79-d465-462e-9c84-073e23e946ac: # derschmuckmacher.ch
+    hasUrls: true
+    template: null
+    uriFormat: 'schmucktyp/{slug}'
+structure:
+  maxLevels: 1
+  uid: 17f1bf7a-68cb-448b-8dba-d79fef1bbeb6

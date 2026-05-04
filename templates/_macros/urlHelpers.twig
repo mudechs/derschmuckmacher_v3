@@ -1,0 +1,13 @@
+{% macro isActive(segment) %}
+  {%- set segment_1 = craft.app.request.segment(1) -%}
+  {%- set segment_2 = craft.app.request.segment(2) -%}
+  {%- set isActive = false -%}
+  {%- if segment_1 == '' and segment == 'home' -%}
+    {%- set isActive = true -%}
+  {%- elseif (segment_1 == segment and segment_1 != '') and segment_2 == '' -%}
+    {%- set isActive = true -%}
+  {%- elseif segment_2 == segment -%}
+    {%- set isActive = true -%}
+  {% endif %}
+  {{- isActive -}}
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% css %}
+  #{{ ref }} {
+    display: none;
+  }
+
+  #{{ ref }}.loading {
+    display: block;
+  }
+{% endcss %}
+
+<div id="{{ ref }}" class="indicator">
+  <div class="d-flex justify-content-center my-3 mb-5">
+    <span class="loader"></span>
+  </div>
+</div>

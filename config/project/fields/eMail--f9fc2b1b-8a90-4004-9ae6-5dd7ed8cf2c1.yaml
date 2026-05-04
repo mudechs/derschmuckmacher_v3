@@ -1,0 +1,14 @@
+columnSuffix: nzapemjo
+handle: eMail
+instructions: null
+name: 'Matrix - Verlinkung - E-Mail'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  types:
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

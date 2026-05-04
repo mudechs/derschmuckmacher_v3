@@ -1,0 +1,14 @@
+{% import "_macros/urlHelpers.twig" as urlHelpers %}
+
+<div class="container pt-3">
+  <nav class="admin-nav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link ps-0{{ urlHelpers.isActive('reservationen')|spaceless|boolean ? ' active':''}}" {{ urlHelpers.isActive('reservationen')|spaceless|boolean ? ' aria-current="page"':''}} href="{{ alias('@web/administration/reservationen') }}">Reservationen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{{ urlHelpers.isActive('verkauft')|spaceless|boolean ? ' active':''}}" {{ urlHelpers.isActive('verkauft')|spaceless|boolean ? ' aria-current="page"':''}} href="{{ alias('@web/administration/verkauft') }}">Verkauft</a>
+      </li>
+    </ul>
+  </nav>
+</div>

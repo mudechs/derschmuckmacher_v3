@@ -1,0 +1,55 @@
+columnSuffix: yilbcult
+contentColumnType: string
+handle: verkaufsstatus
+instructions: null
+name: Verkaufsstatus
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Verfügbar
+        -
+          - value
+          - Verfügbar
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Reserviert
+        -
+          - value
+          - Reserviert
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Verkauft
+        -
+          - value
+          - Verkauft
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Unverkäuflich
+        -
+          - value
+          - Unverkäuflich
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

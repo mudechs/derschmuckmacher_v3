@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: de
+name: derschmuckmacher.ch
+primary: true
+siteGroup: 82823828-5649-4051-b06d-c122d5bc5763 # derschmuckmacher.ch
+sortOrder: 1

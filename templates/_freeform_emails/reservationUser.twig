@@ -1,0 +1,116 @@
+{# subject: Deine Reservation auf derschmuckmacher.ch #}
+{# fromEmail: info@derschmuckmacher.ch #}
+{# fromName: derschmuckmacher.ch #}
+{# replyToName: derschmuckmacher.ch #}
+{# replyToEmail: info@derschmuckmacher.ch #}
+{# cc:  #}
+{# bcc:  #}
+{# includeAttachments: false #}
+{# presetAssets:  #}
+{# templateName: Reservation (User) #}
+{# description:  #}
+
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+  <title>Reservationsbestätigung</title>
+
+  <style>
+    body, html {
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      background: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    p, ul {
+      font-size: 16px;
+    }
+
+    table {
+      border: 1px solid #333333;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table th, table td {
+      border: 1px solid #000;
+      padding: 6px;
+      text-align: left;
+    }
+    table th {
+      width: 30%;
+    }
+
+    .container {
+      background: #F0F0F0;
+      max-width: 600px;
+      margin: 20px;
+      padding: 30px;
+    }
+
+    .header {
+      margin-bottom: 80px;
+    }
+
+    .text {
+      margin-bottom: 40px;
+    }
+
+    .order {
+      margin-bottom: 80px;
+    }
+  </style>
+</head>
+<body class="ltr">
+
+<div class="container">
+  <div class="header">
+    <img src="https://www.derschmuckmacher.ch/public/images/logo_hoch_schwarz_dgrau.svg" alt="Logo" width="200">
+  </div>
+
+  <div class="text">
+    <h1>Reservationsbestätigung</h1>
+    <p>Vielen Dank für Deine Reservation!</p>
+    <p>Diese ist unverbindlich und ich werde mich so rasch als möglich mit Dir in Verbindung setzen.</p>
+  </div>
+
+  <div class="order">
+    <table>
+      <tbody>
+      <tr>
+        <th>ID</th>
+        <td>{{ submission.id }}</td>
+      </tr>
+      <tr>
+        <th>Datum</th>
+        <td>{{ dateCreated|date('d.m.Y') }}</td>
+      </tr>
+      <tr>
+        <th>Produkt</th>
+        <td>{{ itemTitle.value }}</td>
+      </tr>
+      <tr>
+        <th>Preis</th>
+        <td>{{ itemPrice.value }}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><a href="{{ itemUrl.value|raw }}">Link zum Schmuckstück</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="signature">
+    <p>
+      Liebe Grüsse,<br>
+      Andreas Werner<br><br>
+      <a href="https://www.derschmuckmacher.ch/">derschmuckmacher.ch</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ddev status:*)",
+      "Bash(ddev debug:*)",
+      "Bash(ddev logs:*)",
+      "Bash(security find-certificate:*)",
+      "Bash(curl -vk https://127.0.0.1:50524)",
+      "Bash(curl -vk https://derschmuckmacher-v3.ddev.site)",
+      "Bash(ddev poweroff:*)",
+      "Bash(mkcert -install)",
+      "Bash(openssl x509:*)",
+      "Bash(ddev start:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

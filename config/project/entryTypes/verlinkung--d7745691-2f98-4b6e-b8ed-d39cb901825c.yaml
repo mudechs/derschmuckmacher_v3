@@ -1,0 +1,61 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  a36f74ec-e675-48e4-939a-c0e0564fbe90:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:15b5126c-c0c5-4fd0-885a-655138124810'
+      - 'layoutElement:daf66fdf-1890-4ced-8875-166e1f8ad623'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3ace9d54-fba2-4743-bceb-6ac0e59ead03
+            handle: null
+            instructions: null
+            label: Webseite
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15b5126c-c0c5-4fd0-885a-655138124810
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f9fc2b1b-8a90-4004-9ae6-5dd7ed8cf2c1
+            handle: null
+            instructions: null
+            label: E-Mail
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: daf66fdf-1890-4ced-8875-166e1f8ad623
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2cd2f9f7-d599-4cf4-99b9-c7040c0e1663
+        userCondition: null
+    thumbFieldKey: null
+handle: verlinkung
+hasTitleField: false
+icon: null
+name: Verlinkung
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

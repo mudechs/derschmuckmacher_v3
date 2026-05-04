@@ -1,0 +1,25 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  e59eb611-5858-4caa-8932-67a7feef32e3:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Inhalt
+        uid: 17bd28bd-98a2-46d4-b83d-0ffd752cbc4c
+        userCondition: null
+    thumbFieldKey: null
+handle: latestNews
+hasTitleField: false
+icon: newspaper
+name: 'Latest News'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

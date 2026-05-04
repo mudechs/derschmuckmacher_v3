@@ -1,0 +1,105 @@
+{% set types = craft.categories()
+  .group('schmuckTyp')
+  .orderBy('title ASC')
+  .all() %}
+
+{% set typesQuery = typesQuery ?? '' %}
+
+{% set steinsorten = craft.categories()
+  .group('steinsorten')
+  .orderBy('title ASC')
+  .all() %}
+
+{% set steinsortenQuery = steinsortenQuery ?? '' %}
+
+{% set thumb = {
+  mode: 'crop',
+  width: 612,
+  height: 612,
+  quality: 100,
+  position: 'center-center'
+} %}
+
+<div class="row py-4">
+  <div class="col-md-4">
+    <p><a sprig s-trigger="click" s-val:typesQuery="" href="javascript:void(0)" class="category-link{{ typesQuery == '' and steinsortenQuery == '' ? ' active' }}" role="button" data-bs-toggle="button">Neueste Stücke</a></p>
+    <ul class="list-unstyled mt-3">
+      {% for type in types %}
+        <li class="py-1"><a sprig s-trigger="click" s-val:typesQuery="{{ type.id }}" href="javascript:void(0)" class="category-link{{ typesQuery == type.id ? ' active' }}">{{ type.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-8 pt-5">
+    {% for steinsorte in steinsorten %}
+      <a sprig s-trigger="click" s-val:steinsortenQuery="{{ steinsorte.id }}" href="javascript:void(0)" class="btn btn-link{{ steinsortenQuery == steinsorte.id ? ' active' }}">{{ steinsorte.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col">
+    <div class="results">
+      {{ sprig('_components/indicator', {
+        ref: indicator
+      }) }}
+
+      {% if typesQuery or steinsortenQuery %}
+        {% set entries = craft.entries()
+          .section('schmuck')
+          .typ(typesQuery)
+          .steinsorte(steinsortenQuery)
+          .verkaufsstatus('Verfügbar')
+          .orderBy('title ASC')
+          .status('live')
+          .all() %}
+
+        {% if entries %}
+          <div class="row">
+            {% for entry in entries %}
+              {% set image = entry.bild.one() %}
+              <div class="col-6 col-lg-3 mb-4">
+                <a href="{{ entry.url }}" title="{{ entry.title }}">
+                  {% if image|length %}
+                    <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% else %}
+                    <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% endif %}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>{{ 'Zur Zeit sind keine Schmuckstücke in dieser Kategorie vorhanden'|t }}.</p>
+        {% endif %}
+      {% else %}
+        {% set entries = craft.entries()
+          .section('schmuck')
+          .verkaufsstatus('Verfügbar')
+          .orderBy('postDate DESC')
+          .limit(8)
+          .status('live')
+          .all() %}
+
+        {% if entries %}
+          <div class="row">
+            {% for entry in entries %}
+              {% set image = entry.bild.one() %}
+              <div class="col-6 col-lg-3 mb-4">
+                <a href="{{ entry.url }}" title="{{ entry.title }}">
+                  {% if image|length %}
+                    <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% else %}
+                    <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% endif %}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>{{ 'Zur Zeit sind keine Schmuckstücke in dieser Kategorie vorhanden'|t }}.</p>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+

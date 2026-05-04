@@ -1,0 +1,36 @@
+{% set entries = craft.entries()
+  .section('schmuck')
+  .orderBy('postDate DESC')
+  .limit(12)
+  .status('live')
+  .verkaufsstatus('Verfügbar')
+  .all() %}
+
+{% if sprig.isRequest %}
+  {% if entries %}
+    <div class="row g-lg-5">
+      {% for entry in entries %}
+        {% set image = entry.schmuckbild.one() %}
+
+        <div class="col-12 col-lg-6">
+          <a href="{{ entry.url }}" title="{{ entry.title }}">
+            {% if image|length %}
+              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+              <caption>
+                <span class="small">Ref-Nr: {{ entry.id }} ({{ entry.verkaufsstatus }})</span>
+              </caption>
+            {% else %}
+              <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{{ 'Zur Zeit sind keine Schmuckstücke in dieser Kategorie vorhanden'|t }}.</p>
+  {% endif %}
+{% endif %}
+
+{{ sprig('_components/indicator', {
+  ref: indicator
+}) }}

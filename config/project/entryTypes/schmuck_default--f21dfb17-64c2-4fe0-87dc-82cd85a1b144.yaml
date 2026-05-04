@@ -1,0 +1,156 @@
+fieldLayouts:
+  3124f1bf-3194-4c8a-901e-1d1c42a76894:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 909b8447-f196-4f58-b085-e28f384e471e # Schmuckbild
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8a25307-bd04-48bf-a774-e0d02f6e42c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cbf81e64-4f31-47f7-a93d-8814152ca853
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b3feb430-6f64-4f81-9110-fe29fe83877b # Beschreibung
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1996c32-6166-4210-b17d-583dfa78507b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 672200c4-d5dc-4fe9-9315-db44b7f01aa1 # Typ
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e011f305-5150-4508-b458-9fedba9e75ad
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 94b58dd0-93fe-437c-ba74-d026ede98964 # Grundmaterial
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e4455c11-7190-4c4f-bee9-13cc86379366
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: db76f042-b183-43a3-9a2d-52f01a0a0e93 # Steinsorte
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0fda6ddc-c7a6-4096-a219-121800a8ec60
+            userCondition: null
+            warning: null
+            width: 25
+        name: Inhalt
+        uid: 5d82bcfe-f0fc-419c-a179-cad189372de9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 50eb4166-7047-4cff-8492-548477dfe9dd # Verkaufsstatus
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd51e155-a5e9-475c-a769-679963e25312
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2147c58d-04d1-4b0a-9657-8caedb130935 # Preis
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11c1787c-3082-4ca8-bf82-8ed6ffcdff09
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 865716c6-6444-4402-a21c-8feb6ae320de # QTY
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff349634-77d4-4247-bfb7-e51274d07ddd
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d09d18d6-aec2-4660-a131-4c532c32573b # Reservation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f67d6fd9-7cbe-4af3-8beb-d4cccf7619bb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Verkauf
+        uid: 1695bcf0-9710-4953-a5c0-b227c52988e5
+        userCondition: null
+handle: schmuck_default
+hasTitleField: true
+name: Standard
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

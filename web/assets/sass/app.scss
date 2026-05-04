@@ -1,0 +1,323 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+@import "typo";
+@import "hamburger";
+
+.bg-image {
+  background-size: cover;
+  position: relative;
+}
+
+.headimage {
+  height: 300px;
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+}
+
+.kachelimage {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+.bg-footer {
+  background-color: #ebe8e3;
+}
+
+.btn.btn-primary {
+  color: $white;
+}
+
+@include media-breakpoint-up(lg) {
+  .cta-responsive {
+    display: inline-block;
+  }
+}
+
+/* Fade in + Slide up */
+.viewport-toggle {
+  opacity: 0;
+}
+.viewport-toggle.out-viewport {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.1s ease;
+}
+.viewport-toggle.in-viewport {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2s ease;
+}
+
+.bg-blur {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-blur::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(4px);
+  z-index: 0;
+}
+
+.bg-blur > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-blur::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 0;
+}
+
+a:hover .bg-blur::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header-homepage {
+  position: relative;
+  z-index: 100;
+}
+
+.link-underline:hover {
+  text-decoration: underline;
+}
+
+.btn-link {
+  color: $black;
+}
+
+.btn-check + .btn:hover {
+  color: $secondary;
+}
+
+.admin-nav {
+  .nav {
+    .nav-item {
+      .nav-link {
+        color: $black;
+
+        &:hover {
+          color: $danger;
+        }
+
+        &.active {
+          color: $danger;
+        }
+      }
+    }
+  }
+}
+
+// Forms
+.form-control,
+.form-check-input {
+  padding-left: 1px;
+  background: $light;
+  border: none;
+  border-bottom: 2px solid $secondary;
+
+  &:focus {
+    background: $light;
+    border-bottom: 2px solid $secondary;
+  }
+}
+
+a > img.img-thumbnail {
+  transition: opacity 200ms;
+  opacity: 100%;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+.alert-danger {
+  border-color: $danger;
+  background: $danger;
+  color: $white;
+
+  p {
+    margin: 0;
+  }
+}
+
+.category-link.active {
+  color: $black;
+}
+
+.logo {
+  img {
+    width: 240px;
+    height: auto;
+  }
+}
+
+.logo-footer {
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.nav {
+  .nav-item {
+    .nav-link {
+      &.active {
+        color: $black !important;
+      }
+    }
+  }
+}
+
+.content-top-padding {
+  padding-top: 78px;
+}
+
+.slide-out {
+  transform: translateY(-78px);
+  transition: opacity 2s, transform 250ms ease-out;
+}
+
+.slide-in {
+  transform: translateY(0);
+  transition: opacity 2s, transform 250ms ease-in;
+}
+
+.go-back,
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+}
+
+.scroll-top {
+  right: 20px;
+
+  img {
+    width: 18px;
+    height: auto;
+  }
+}
+
+.go-back {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+
+  img {
+    width: auto;
+    height: 18px;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #69C0B3;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .headimage {
+    height: 600px;
+  }
+
+  .content {
+    font-size: 1.125rem;
+
+    h2, .h2 {
+      margin: 2rem 0;
+    }
+  }
+
+  .logo {
+    margin-left: 2px;
+
+    img {
+      width: 250px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+
+  .headimage {
+    height: 800px;
+  }
+
+  .kachelimage {
+    height: 400px;
+  }
+
+  .logo {
+    img {
+      width: 400px;
+    }
+  }
+
+  .logo-footer {
+    img {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 2880px) {
+  .kachelimage {
+    height: 500px;
+  }
+
+  .col-wide-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

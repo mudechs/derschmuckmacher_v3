@@ -1,0 +1,54 @@
+allowLineBreaksInTitles: false
+color: blue
+description: 'Zeigt den Haupttitel der angezeigten Seite.'
+fieldLayouts:
+  c67ac8bb-bdf0-4331-b6cc-4b00cec0bb59:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-04-29T12:01:37+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f0f96e73-5b90-425b-9318-11fa905556a3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 6eef6114-475d-46e7-b6a1-a606dc21b448
+        userCondition: null
+    thumbFieldKey: null
+handle: hauptTitel
+hasTitleField: true
+icon: h1
+name: Haupttitel
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

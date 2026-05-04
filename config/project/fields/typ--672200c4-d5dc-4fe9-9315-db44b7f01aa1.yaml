@@ -1,0 +1,24 @@
+columnSuffix: null
+contentColumnType: string
+handle: typ
+instructions: null
+name: Typ
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: 1
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:1fa69461-9d0e-4b99-bcc2-2d2940c77328' # Schmuck-Typ
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,19 @@
+columnSuffix: glqdiuor
+contentColumnType: integer(10)
+handle: preis
+instructions: null
+name: Preis
+searchable: true
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: CHF
+  previewFormat: currency
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

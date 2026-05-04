@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 5054e9bf-72d8-4a7e-884b-6180592ab3dd # Impressum
+handle: impressum
+maxAuthors: 1
+name: Impressum
+previewTargets:
+  -
+    label: 'Primäre eintrag Seite'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  64589d79-d465-462e-9c84-073e23e946ac: # derschmuckmacher.ch
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/content.twig
+    uriFormat: impressum
+type: single

@@ -1,0 +1,37 @@
+{% macro setSold(entry) %}
+  <form class="m-0 p-0 d-inline-block" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ hiddenInput('sectionId', '1') }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+    {{ hiddenInput('fields[verkaufsstatus]', 'Verkauft') }}
+    <button type="submit" class="btn btn-success rounded-pill">Artikel verkauft</button>
+  </form>
+{% endmacro %}
+
+{% macro cancelReservation(entry) %}
+  <form class="m-0 p-0 d-inline-block" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ hiddenInput('sectionId', '1') }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+    {{ hiddenInput('fields[verkaufsstatus]', 'Verfügbar') }}
+    {{ hiddenInput('fields[reservation]', '') }}
+    <button type="submit" class="btn btn-warning rounded-pill">Reservation löschen</button>
+  </form>
+{% endmacro %}
+
+{% macro cancelSale(entry) %}
+  <form class="m-0 p-0 d-inline-block" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ hiddenInput('sectionId', '1') }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+    {{ hiddenInput('fields[verkaufsstatus]', 'Verfügbar') }}
+    {{ hiddenInput('fields[reservation]', '') }}
+    <button type="submit" class="btn btn-warning rounded-pill">Stornieren</button>
+  </form>
+{% endmacro %}

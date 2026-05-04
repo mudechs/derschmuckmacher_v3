@@ -1,0 +1,18 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="container content py-3 py-lg-5">
+      <h1 class="display-1 mt-3 mt-lg-5">Meine Schmuckstücke</h1>
+      <h2 class="display-6">Handgefertigte Schmuckstücke und Unikate aus meinem Atelier.</h2>
+      <p>Jedes Stück entsteht in sorgfältiger Handarbeit und wird nur einmal gefertigt. Wenn Ihnen ein Schmuckstück besonders gefällt, lohnt es sich, dieses vor Ort zu betrachten und anzuprobieren. Gerne dürfen Sie mit mir
+        <a href="/kontakt">Kontakt</a> aufnehmen.</p>
+    </div>
+    <div class="container py-3 py-lg-5">
+      {{ sprig('_components/latest', {
+        indicator: 'latestIndicator',
+        isMobile: isMobile
+      }, {'id': 'latest', 's-trigger': 'load, refresh', 's-indicator': '#latestIndicator'}) }}
+    </div>
+  </div>
+{% endblock %}

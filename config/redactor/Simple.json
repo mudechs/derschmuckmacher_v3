@@ -1,0 +1,23 @@
+{
+  "buttons": [
+    "formatting",
+    "bold",
+    "italic",
+    "underline",
+    "unorderedlist",
+    "orderedlist",
+    "html"
+  ],
+  "fontcolors": [
+    "#D9544F", "#0A0A0A"
+  ],
+  "formatting": [
+    "p"
+  ],
+  "plugins": [
+    "fullscreen",
+    "fontcolor"
+  ],
+  "toolbarFixed": true,
+  "linkNewTab": true
+}

@@ -1,0 +1,46 @@
+defaultPlacement: end
+fieldLayouts:
+  284f55d1-aa02-4862-a472-2a709522b983:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: e5f46c6a-99aa-4fc8-9b05-8d4ab74587c4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 49840372-c222-4d75-b571-e63a5bb72a60
+        userCondition: null
+handle: steinsorten
+name: Steinsorten
+siteSettings:
+  64589d79-d465-462e-9c84-073e23e946ac: # derschmuckmacher.ch
+    hasUrls: true
+    template: null
+    uriFormat: 'steinsorten/{slug}'
+structure:
+  maxLevels: 1
+  uid: 7e49c0e6-523c-4d05-ac2a-b045e795ddc9

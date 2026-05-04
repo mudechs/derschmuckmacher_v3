@@ -1,0 +1,93 @@
+columnSuffix: null
+handle: matrix
+instructions: null
+name: Matrix
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - aab84915-b0f0-47a5-a8b9-e63d4ce1b18e # Fullscreen Bild
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - 6b52062b-39e4-436b-9bb0-a6c9e38b2147 # Head-Bild
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - c10dd50f-48c4-4b9a-9398-d5d1d576d4a7 # Haupttitel
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - ac2ed723-6040-4158-b870-dc769b58b9e4 # Text
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - 82025346-993e-4a4b-be19-9cddb0e41591 # Spacer
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - 1e33faf0-6dcc-47df-a77d-96da095a58be # Kacheln
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - ff6a7fd9-40d5-4aeb-8e90-710a4de8d92d # Latest News
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - 90a880c7-9a34-43b7-b7fb-447b47a661ee
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
+          - d7745691-2f98-4b6e-b8ed-d39cb901825c
+        -
+          - group
+          - Allgemein
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

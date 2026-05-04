@@ -1,0 +1,29 @@
+{% set latestNews = craft.entries()
+  .section('aktuelles')
+  .status('live')
+  .aufStartseiteZeigen(true)
+  .orderBy('postDate desc')
+  .one() %}
+
+  {% if latestNews %}
+    <div class="py-3 py-lg-5"></div>
+
+    {% set bgImage = latestNews.bild.one() %}
+    {% set textColor = latestNews.textfarbe %}
+
+    <a href="{{ latestNews.url }}" class="text-decoration-none d-block">
+      <div class="container-fluid bg-blur" style="background-image: url('{{ bgImage.getUrl() }}'); cursor: pointer;">
+        <div class="row">
+          <div class="col-10 col-lg-8 offset-1 offset-lg-2" style="padding: 200px 0;">
+            <h2 class="display-2 mb-0" {% if textColor %}style="color: {{ textColor }};"{% endif %}>
+              {{ latestNews.title }}
+            </h2>
+            <p class="display-2 mb-0" {% if textColor %}style="color: {{ textColor }};"{% endif %}>
+              {{ latestNews.zeile2 }}<br>
+              {{ latestNews.zeile3 }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  {% endif %}

@@ -1,0 +1,11 @@
+{% macro scrollTop() %}
+  <a href="javascript:void(0);" onclick="scrollToTop()" class="scroll-top rounded-circle bg-primary border border-2 border-white d-flex align-items-center text-white d-none">
+    <img src="{{ alias('@assetBaseUrl/images/arrow_up_white.svg') }}" alt="Nach oben" class="mx-auto">
+  </a>
+{% endmacro %}
+
+{% macro goBack(url) %}
+  <a href="{% if url %}{{ siteUrl }}{{ url }}{% else %}javascript:history.back(){% endif %}" class="go-back rounded-circle bg-primary border border-2 border-white d-flex align-items-center text-white">
+    <img src="{{ alias('@assetBaseUrl/images/arrow_left_white.svg') }}" alt="Zurück" class="mx-auto">
+  </a>
+{% endmacro %}

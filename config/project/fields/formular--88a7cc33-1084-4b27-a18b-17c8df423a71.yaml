@@ -1,0 +1,10 @@
+columnSuffix: haxrxrjf
+handle: formular
+instructions: null
+name: 'Matrix - Formular - Formular'
+searchable: false
+settings:
+  forms: '*'
+translationKeyFormat: null
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

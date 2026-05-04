@@ -1,0 +1,19 @@
+columnSuffix: uphmqxzl
+contentColumnType: integer(10)
+handle: qty
+instructions: null
+name: QTY
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 1
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: none
+  size: null
+  suffix: Stk.
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

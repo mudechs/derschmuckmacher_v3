@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    handle: default
+    uid: f21dfb17-64c2-4fe0-87dc-82cd85a1b144 # Standard
+handle: schmuck
+maxAuthors: 1
+name: Schmuck
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primäre eintrag Seite'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  64589d79-d465-462e-9c84-073e23e946ac: # derschmuckmacher.ch
+    enabledByDefault: true
+    hasUrls: true
+    template: schmuck/_entry
+    uriFormat: 'schmuck/{id}'
+type: channel

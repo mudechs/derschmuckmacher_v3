@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  83192a34-abdf-42e9-80a6-be8ac63d632b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-29T11:20:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bd901d74-2d69-42d8-b8e6-09c9f6d1945d # Kacheln
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c996a99-3263-4ec1-9239-6d0825610ca3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: ad22d7c9-c635-4a08-bcfd-2bee67a81e02
+        userCondition: null
+    thumbFieldKey: null
+handle: kacheln
+hasTitleField: false
+icon: grid-2
+name: Kacheln
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

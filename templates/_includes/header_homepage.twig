@@ -1,0 +1,27 @@
+<div class="container-fluid g-0 header-homepage">
+  <div class="row g-0 vh-100">
+    <div class="col-md-6">
+      <div class="px-3 pt-4">
+        <a href="{{ siteUrl }}" title="Home">
+          <img src="{{ alias('@assetBaseUrl/images/logo_hoch_weiss_dgrau.svg') }}" alt="Logo" class="img-fluid">
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center align-items-end">
+      <div class="p-3 mb-5">
+        {% set entry = craft.entries()
+          .section('aktuelles')
+          .aufStartseiteZeigen(1)
+          .one()
+        %}
+
+        {% if entry != null %}
+          <p class="mb-5"><a href="{{ entry.url }}" title="{{ entry.title }}" class="display-5 text-primary">_{{ entry.title }}</a></p>
+        {% endif %}
+
+        <p class="m-0"><a href="{{ alias('@web/schmuck') }}" class="display-4 link-light link-underline" title="Schmuckarbeiten">Schmuckarbeiten</a></p>
+        <p class="m-0"><a href="{{ alias('@web/kontakt') }}" class="display-4 link-light link-underline" title="Kontakt">Kontakt</a></p>
+      </div>
+    </div>
+  </div>
+</div>

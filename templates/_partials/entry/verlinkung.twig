@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="container pb-3 pb-lg-5">
+    <div class="content">
+      <span>––</span>
+      <ul class="list-unstyled">
+        {% if entry.webseite %}
+          <li>
+            <a href="{{ entry.webseite|raw }}" target="_blank" rel="noopener">Webseite besuchen</a>
+          </li>
+        {% endif %}
+        {% if entry.eMail %}
+          <li>
+            {% set emailTitle = 'Kontakt via E-Mail'|t %}
+            {%- set email = '<a href="mailto:' ~ entry.eMail ~ '" target="_top">' ~ emailTitle ~ '</a>' -%}
+
+            {{ email|enkode_mailtos }}
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>

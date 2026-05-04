@@ -1,0 +1,28 @@
+@import "fonts";
+
+$font-family-base: "InterRegular", sans-serif;
+$enable-rounded: false;
+
+$primary: #b99e77;
+$light: #f6f4f1;
+$danger: #D9564E;
+$black: #2e2a27;
+$white: #FFFFFF;
+$secondary: #999999;
+
+$font-color-base: $black;
+$body-color: $black;
+$headings-color: $black;
+
+$link-color: $font-color-base;
+$link-decoration: none;
+$link-hover-color: $primary;
+$nav-link-color: $primary;
+$nav-link-hover-color: $black;
+// $link-hover-decoration: underline;
+
+// Forms
+$input-focus-bg: $white;
+$input-focus-border-color: $white;
+$input-focus-box-shadow: none;
+$form-check-input-focus-box-shadow: none;

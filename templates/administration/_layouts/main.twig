@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+  {% import '_macros/scrollers.twig' as scroller %}
+
+  {% include '_includes/metatags.twig' %}
+
+  <meta name="robots" content="none">
+
+  {% requireLogin %}
+
+  {% set segment_1 = craft.app.request.segment(1) %}
+  {% set isMobile = craft.app.request.isMobileBrowser() %}
+
+  {% include "_includes/favicons.twig" %}
+
+  <link rel="stylesheet" href="{{ alias('@assetBaseUrl/css/app.css') }}">
+</head>
+<body class="ltr">
+
+<header id="header" class="bg-white{{ segment_1 != '' ? ' dynamic-head-navigation position-fixed w-100' }}">
+  {% include "_includes/header.twig" %}
+</header>
+
+<main id="main" role="main" class="bg-light{{ segment_1 != '' ? ' content-top-padding' }}">
+  {% include "administration/_includes/nav.twig" %}
+
+  {% block content %}{% endblock %}
+</main>
+
+{{ scroller.scrollTop() }}
+
+<script src="{{ alias('@assetBaseUrl/js/app.js') }}"></script>
+
+{% do sprig.setConfig({ requestClass: 'loading' }) %}
+
+</body>
+</html>

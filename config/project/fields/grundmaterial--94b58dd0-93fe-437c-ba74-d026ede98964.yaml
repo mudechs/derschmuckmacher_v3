@@ -1,0 +1,66 @@
+columnSuffix: deyyeapm
+contentColumnType: string
+handle: grundmaterial
+instructions: null
+name: Grundmaterial
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Silber 925'
+        -
+          - value
+          - 'Silber 925'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Feinsilber
+        -
+          - value
+          - Feinsilber
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold 750'
+        -
+          - value
+          - 'Gold 750'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold 916'
+        -
+          - value
+          - 'Gold 916'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Platin
+        -
+          - value
+          - Platin
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

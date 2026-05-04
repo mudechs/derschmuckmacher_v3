@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+  {% import '_macros/scrollers.twig' as scroller %}
+
+  {% include '_includes/metatags.twig' %}
+
+  {% set segment_1 = craft.app.request.segment(1) %}
+  {% set isMobile = craft.app.request.isMobileBrowser() %}
+
+  {% hook "seo" %}
+
+  {% include "_includes/favicons.twig" %}
+
+  <link rel="stylesheet" href="{{ alias('@assetBaseUrl/css/app.css') }}">
+
+</head>
+<body class="ltr">
+
+{% if isMobile or segment_1 == '' %}
+  {% include "_includes/hamburger.twig" %}
+{% else %}
+  <header id="header" class="bg-white dynamic-head-navigation position-fixed w-100 z-3">
+    {% include "_includes/header.twig" %}
+  </header>
+{% endif %}
+
+<main id="main" role="main" class="bg-light{{ segment_1 != '' ? ' content-top-padding' }}">
+  {% block content %}{% endblock %}
+</main>
+
+<footer id="footer" class="bg-footer">
+  {% include "_includes/footer.twig" %}
+</footer>
+
+{{ scroller.scrollTop() }}
+
+<script src="{{ alias('@assetBaseUrl/js/app.js') }}"></script>
+
+{% do sprig.setConfig({ requestClass: 'loading' }) %}
+
+</body>
+</html>

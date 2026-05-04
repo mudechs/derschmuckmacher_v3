@@ -1,0 +1,14 @@
+columnSuffix: ahchekyd
+handle: webseite
+instructions: null
+name: 'Matrix - Verlinkung - Webseite'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

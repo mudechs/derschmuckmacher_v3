@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: amber
+description: null
+fieldLayouts:
+  43608c6b-59b1-472d-a74b-4f960742d61d:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-30T08:57:46+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5e61dcef-f6ae-4afa-b05a-49814231e6ef # Bild
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94c42ed0-c4f2-47c7-894d-f8ccf8ce2896
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 00fe6565-ca7b-43ed-87fb-21e4d35f5e6f
+        userCondition: null
+    thumbFieldKey: null
+handle: headImage
+hasTitleField: false
+icon: image-landscape
+name: Head-Bild
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

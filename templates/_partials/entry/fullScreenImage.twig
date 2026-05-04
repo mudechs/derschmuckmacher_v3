@@ -1,0 +1,14 @@
+{% set fullscreenBild = entry.bild.one() %}
+
+{% if fullscreenBild %}
+  <div class="bg-image vh-100">
+    <div
+        class="overlay z-1"
+        style="background: url('{{ fullscreenBild.getUrl() }}') no-repeat center; background-size: cover;"
+    ></div>
+
+    {% if entry.logoZeigen %}
+      {% include "_includes/homepage_logo.twig" %}
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: teal
+description: null
+fieldLayouts:
+  bcf16ca1-0334-42b8-8b2c-d9ad3c5b3471:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-29T10:21:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b3a4a7b7-2e06-4652-949e-63cdd2941c2d # Auf Startseite zeigen
+            handle: logoZeigen
+            instructions: null
+            label: 'Logo zeigen'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d49266c-3856-401e-99e9-583ca82af3c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-30T08:41:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5e61dcef-f6ae-4afa-b05a-49814231e6ef # Bild
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb34e115-cc29-4d81-8e8e-4192fb9be05b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 785df1bd-9093-412d-8c82-ac7f28b70ca5
+        userCondition: null
+    thumbFieldKey: null
+handle: fullScreenImage
+hasTitleField: false
+icon: image
+name: 'Fullscreen Bild'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,35 @@
+{# Hamburger Menu Button #}
+<button class="hamburger-menu" type="button" aria-label="Menu" aria-expanded="false">
+  <span class="hamburger-bar"></span>
+  <span class="hamburger-bar"></span>
+  <span class="hamburger-bar"></span>
+</button>
+
+{# Bootstrap Modal for Navigation #}
+<div class="modal fade" id="navigationModal" tabindex="-1" aria-labelledby="navigationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-body d-flex align-items-center justify-content-center">
+        <nav class="navigation-menu">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link display-6" href="{{ siteUrl }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link display-6" href="{{ url('schmuck') }}">Schmuckstücke</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link display-6" href="{{ url('ueber-mich') }}">Der Schmuckmacher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link display-6" href="{{ url('aktuelles') }}">Aktuelles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link display-6" href="{{ url('kontakt') }}">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

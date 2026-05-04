@@ -1,0 +1,151 @@
+{# Set default values #}
+{% set schmuckTyp = schmuckTyp ?? '' %}
+{% set grundmaterial = grundmaterial ?? '' %}
+{% set steinsorte = steinsorte ?? [] %}
+
+{% if reset is defined %}
+  {% set schmuckTyp = '' %}
+  {% set grundmaterial = '' %}
+  {% set steinsorte = [] %}
+{% endif %}
+
+{% set schmuckTypOptions = craft.categories().group('schmuckTyp').orderBy('title ASC').all() %}
+{#{% set grundmaterialOptions = craft.app.fields.getFieldByHandle('grundmaterial') %}#}
+
+{% set entries = craft.entries()
+  .section('schmuck')
+  .verkaufsstatus('Verfügbar')
+  .status('live') %}
+
+{% set availableItems = entries.all() %}
+
+{% set steinsortenOptions = craft.categories()
+  .group('steinsorten')
+  .relatedTo(availableItems)
+  .id('not 6523')
+  .orderBy('title ASC')
+  .all() %}
+
+<div class="row mt-3 mt-md-5">
+  <div class="col-md-3">
+    <div class="row">
+      <div class="col-6 col-md-12">
+        <div class="mb-3 mb-md-5">
+          <p class="{{ isMobile ? 'small' }}">Kategorie:</p>
+          <select sprig id="schmuckTyp" name="schmuckTyp" value="{{ schmuckTyp }}" class="form-select border-white bg-light rounded-pill">
+            <option value="">Alle</option>
+            {% for schmuckTypOption in schmuckTypOptions %}
+              <option value="{{ schmuckTypOption.id }}" {{ schmuckTyp == schmuckTypOption.id ? 'selected' }}>{{ schmuckTypOption.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      {% if isMobile %}
+        <div class="col-12 col-md-12">
+          <div class="mb-3 mb-md-0">
+            <p class="small">Steinart:</p>
+            <div class="card card-body rounded-3 overflow-auto py-0 ps-2" style="max-height: 200px;">
+              <div class="row">
+                {% for steinsortenOption in steinsortenOptions %}
+                  <div class="col-6">
+                    <div class="form-check m-0 p-0">
+                      <input sprig id="steinsorte_{{ steinsortenOption.id }}" name="steinsorte[]" value="{{ steinsortenOption.id }}" type="checkbox" {{ steinsortenOption.id in steinsorte ? 'checked' }}>
+                      <label class="form-check-label" for="steinsorte_{{ steinsortenOption.id }}">
+                        {{ steinsortenOption.title }}
+                      </label>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="col-6 col-md-12">
+        <div class="mb-0">
+          <a href="" sprig s-val:reset="1" title="Filter zurücksetzen" class="btn btn-sm btn-outline-secondary rounded-pill">Filter zurücksetzen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if not isMobile %}
+    <div class="col-md-9">
+      <p>Steinart:</p>
+      <div class="mb-3">
+        <input sprig id="steinsorte_6523" name="steinsorte[]" value="6523" class="btn-check" type="checkbox" {{ '6523' in steinsorte ? 'checked' }}>
+        <label class="btn btn-link ps-0 py-1" for="steinsorte_6523">
+          ohne Stein
+        </label>
+      </div>
+      {% for steinsortenOption in steinsortenOptions %}
+        <div class="d-inline-block">
+          <input sprig id="steinsorte_{{ steinsortenOption.id }}" name="steinsorte[]" value="{{ steinsortenOption.id }}" class="btn-check" type="checkbox" {{ steinsortenOption.id in steinsorte ? 'checked' }}>
+          <label class="btn btn-link ps-0 py-1" for="steinsorte_{{ steinsortenOption.id }}">
+            {{ steinsortenOption.title }}
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<div class="row">
+  <div class="col">
+    {% set schmuckQuery = craft.entries()
+      .section('schmuck')
+      .verkaufsstatus('Verfügbar')
+      .reservation(':empty:')
+      .orderBy('postDate DESC')
+      .status('live') %}
+
+    {% if schmuckTyp %}
+      {% do schmuckQuery.typ(schmuckTyp) %}
+    {% endif %}
+
+    {#{% if grundmaterial %}
+      {% do schmuckQuery.grundmaterial(grundmaterial) %}
+    {% endif %}#}
+
+    {% if steinsorte is not empty %}
+      {% do schmuckQuery.andRelatedTo(steinsorte) %}
+    {% endif %}
+
+    {% set entries = schmuckQuery.all() %}
+
+    {% set thumb = {
+      mode: 'crop',
+      width: 612,
+      height: 612,
+      quality: 100,
+      position: 'center-center'
+    } %}
+
+      <div class="row mt-5">
+        {{ sprig('_components/indicator', {
+          ref: indicator
+        }) }}
+
+        {% if entries %}
+          {% if sprig.isRequest %}
+            {% for entry in entries %}
+              {% set image = entry.schmuckbild.one() %}
+              <div class="col-6 col-lg-3 mb-4">
+                <a href="{{ entry.url }}" title="{{ entry.title }}">
+                  {% if image|length %}
+                    <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% else %}
+                    <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                  {% endif %}
+                </a>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% else %}
+          <p>Keine Schmuckstücke mit diesen Auswahlkriterien vorhanden.</p>
+        {% endif %}
+      </div>
+  </div>
+</div>

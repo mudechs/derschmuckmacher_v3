@@ -1,0 +1,54 @@
+{% set isMobile = craft.app.request.isMobileBrowser() %}
+
+<div class="latest container-fluid border-top border-bottom border-white border-2 mt-5">
+  <div class="container position-relative py-5">
+    <div class="title-box position-absolute{{ isMobile ? ' start-50 top-0 translate-middle':' start-0 top-0 translate-middle-y' }} border border-white border-2 bg-white px-3 py-1">
+      <h3 class="m-0 text-nowrap">Ähnliche Stücke</h3>
+    </div>
+
+    {% set entries = craft.entries()
+      .section('schmuck')
+      .id('not ' ~ id)
+      .typ(typId)
+      .steinsorte(steinsorteIds)
+      .verkaufsstatus(verkaufsstatusValue)
+      .orderBy('title ASC')
+      .status('live')
+      .limit(6)
+      .all() %}
+
+    {% if sprig.isRequest %}
+      {% if entries %}
+        <div class="row">
+          {% for entry in entries %}
+            <div class="col-6 col-md-2">
+              {% set image = entry.schmuckbild.one() %}
+              {% set thumb = {
+                mode: 'crop',
+                width: 300,
+                height: 300,
+                quality: 90,
+                position: 'center-center'
+              } %}
+
+              <a href="{{ entry.url }}" title="{{ entry.title }}" class="d-inline-block">
+                {% if image|length %}
+                  <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                {% else %}
+                  <img src="{{ alias('@assetBaseUrl/images/placeholder.png') }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
+                {% endif %}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>Es sind keine ähnlichen Stücke vorhanden</p>
+      {% endif %}
+    {% endif %}
+
+    {{ sprig('_components/indicator', {
+      ref: indicator
+    }) }}
+
+  </div>
+</div>

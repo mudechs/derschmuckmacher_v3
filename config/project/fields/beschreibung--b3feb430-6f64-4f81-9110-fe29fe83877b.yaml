@@ -1,0 +1,45 @@
+columnSuffix: jebsewlt
+contentColumnType: text
+handle: beschreibung
+instructions: null
+name: Beschreibung
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  columnType: text
+  css: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  fullGraphqlData: false
+  headingLevels:
+    - 2
+    - 3
+    - 4
+  js: null
+  options: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - underline
+    - strikethrough
+    - subscript
+    - superscript
+    - '|'
+    - bulletedList
+    - todoList
+    - '|'
+    - link
+    - '|'
+    - sourceEditing
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

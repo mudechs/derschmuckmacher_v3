@@ -1,0 +1,37 @@
+<div class="container-fluid g-0">
+  {% if isMobile %}
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-12">
+          <a href="{{ siteUrl }}" title="Home">
+            <img src="{{ alias('@assetBaseUrl/images/logos/logo_lang.svg') }}" alt="Logo" class="w-75">
+          </a>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="container g-0 position-relative">
+      <a href="{{ siteUrl }}" title="Home" class="logo position-absolute left-0;" style="bottom: 6px;">
+        <img src="{{ alias('@assetBaseUrl/images/logos/logo_lang.svg') }}" alt="Logo">
+      </a>
+
+      <ul class="nav mb-2 mt-5 d-flex justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link py-0{{ segment_1 == '' ? ' active' }}" href="{{ siteUrl }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0{{ segment_1 == 'schmuck' ? ' active' }}" href="{{ url('schmuck') }}">Schmuckstücke</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0{{ segment_1 == 'ueber-mich' ? ' active' }}" href="{{ url('ueber-mich') }}">Der Schmuckmacher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0{{ segment_1 == 'aktuelles' ? ' active' }}" href="{{ url('aktuelles') }}">Aktuelles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0{{ segment_1 == 'kontakt' ? ' active' }}" href="{{ url('kontakt') }}">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  {% endif %}
+</div>

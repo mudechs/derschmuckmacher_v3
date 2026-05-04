@@ -1,0 +1,35 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-pill text-white mt-5" data-bs-toggle="modal" data-bs-target="#reservationModal">
+  Unverbindlich reservieren
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="reservationModalLabel">Reservation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ craft.freeform.form("reservation").render({
+          submitClass: "btn btn-primary rounded-pill text-white mt-5",
+          overrideValues: {
+            itemTitle: entry.title,
+            itemId: entry.id,
+            itemPrice : entry.preis|currency('CHF'),
+            itemUrl: craft.app.request.absoluteUrl
+          },
+          relations: {
+            reservation: entry.id
+          },
+        }) }}
+        {% js %}
+          form.addEventListener("freeform-ready", function (event) {
+          event.target.freeform.setOption("errorBannerMessage", "{{ 'Sorry, there was an error submitting the form. Please try again'|t('freeform') }}" );
+          });
+        {% endjs %}
+      </div>
+    </div>
+  </div>
+</div>

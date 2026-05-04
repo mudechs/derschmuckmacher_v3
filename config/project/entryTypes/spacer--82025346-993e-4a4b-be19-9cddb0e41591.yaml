@@ -1,0 +1,25 @@
+allowLineBreaksInTitles: false
+color: pink
+description: null
+fieldLayouts:
+  fc1486ad-8f99-43ac-a92b-816e2ab390fb:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Inhalt
+        uid: ebed0d3b-70fb-43f8-b2e5-632503035536
+        userCondition: null
+    thumbFieldKey: null
+handle: spacer
+hasTitleField: false
+icon: arrows-from-line
+name: Spacer
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
