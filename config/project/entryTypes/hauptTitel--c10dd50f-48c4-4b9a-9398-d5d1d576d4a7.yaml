@@ -36,6 +36,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-05-04T12:39:35+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 35942a3c-f1eb-46ad-8339-bf03c5c1d2ed # Buttonlink
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cb84399-234c-4abd-9839-d4865d2fac56
+            userCondition: null
+            warning: null
+            width: 100
         name: Inhalt
         uid: 6eef6114-475d-46e7-b6a1-a606dc21b448
         userCondition: null

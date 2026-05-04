@@ -1,13 +1,18 @@
 <div class="container-fluid">
   <div class="container pb-3 pb-lg-5">
     <div class="content">
-      <h1 class="display-1 mt-3 mt-lg-5">
+      <h1 class="display-1 my-3 my-lg-5">
         {% if entry.title %}
-          {{ entry.title }}
+          {{ entry.title|raw }}
         {% else %}
           {{ entry.owner.title }}
         {% endif %}
       </h1>
+      {% if entry.buttonLink %}
+        <div class="col-12 col-lg-4 mt-auto">
+          <a href="{{ entry.buttonLink.url }}" target="{{ entry.buttonLink.target }}" class="btn btn-lg btn-primary py-3 px-4 viewport-toggle d-block">{{ entry.buttonLink.title }}</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
