@@ -1,0 +1,25 @@
+allowLineBreaksInTitles: false
+color: fuchsia
+description: null
+fieldLayouts:
+  ee948b5a-fd4d-4831-a8cc-87419efd0cd3:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Inhalt
+        uid: bb9aee4a-f9db-4e1a-a01c-438fcb2e787f
+        userCondition: null
+    thumbFieldKey: null
+handle: schmuck
+hasTitleField: false
+icon: gem
+name: Schmuck
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

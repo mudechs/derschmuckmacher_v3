@@ -1,0 +1,10 @@
+{% set isMobile = craft.app.request.isMobileBrowser() %}
+
+<div class="container-fluid">
+  <div class="container pb-3 pb-lg-5">
+    {{ sprig('_components/library', {
+      indicator: 'libraryIndicator',
+      isMobile: isMobile
+    }, {'id': 'library', 's-trigger': 'load, refresh', 's-indicator': '#libraryIndicator'}) }}
+  </div>
+</div>

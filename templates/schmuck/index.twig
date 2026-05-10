@@ -1,7 +1,8 @@
 {% extends "_layouts/main.twig" %}
 
 {% block content %}
-  <div class="container-fluid">
+  {% include "_includes/matrix.twig" %}
+  {#<div class="container-fluid">
     <div class="container content py-3 py-lg-5">
       <h1 class="display-1 mt-3 mt-lg-5">Meine Schmuckstücke</h1>
       <h2 class="display-6">Handgefertigte Schmuckstücke und Unikate aus meinem Atelier.</h2>
@@ -14,5 +15,5 @@
         isMobile: isMobile
       }, {'id': 'latest', 's-trigger': 'load, refresh', 's-indicator': '#latestIndicator'}) }}
     </div>
-  </div>
+  </div>#}
 {% endblock %}

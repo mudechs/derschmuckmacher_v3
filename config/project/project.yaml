@@ -1,4 +1,4 @@
-dateModified: 1777898375
+dateModified: 1778419268
 elementSources:
   craft\elements\Asset:
     -
@@ -131,6 +131,7 @@ meta:
     6b52062b-39e4-436b-9bb0-a6c9e38b2147: Head-Bild # Head-Bild
     6e94798d-557b-4c6c-b953-bb5bcf2e4360: Matrix # Matrix
     22e57b48-47ad-45b8-8b58-bd90cbeca5d6: Kachel # Kachel
+    25a53de5-3bf8-4622-9f8f-eafd9f20a806: Schmuck # Schmuck
     025c902d-9eb8-4acb-ad3d-dbc5c6a7a967: 'Über mich' # Über mich
     50eb4166-7047-4cff-8492-548477dfe9dd: Verkaufsstatus # Verkaufsstatus
     55a6fad2-e8ea-482b-8609-0386f139aea2: Headbild # Headbild

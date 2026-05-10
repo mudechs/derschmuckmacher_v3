@@ -6,9 +6,13 @@
   #{{ ref }}.loading {
     display: block;
   }
+
+  #{{ ref }}.loading ~ .entries-grid {
+    display: none;
+  }
 {% endcss %}
 
-<div id="{{ ref }}" class="indicator">
+<div id="{{ ref }}" class="indicator py-5">
   <div class="d-flex justify-content-center my-3 mb-5">
     <span class="loader"></span>
   </div>

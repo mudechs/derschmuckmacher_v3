@@ -68,6 +68,14 @@ settings:
       __assoc__:
         -
           - uid
+          - 25a53de5-3bf8-4622-9f8f-eafd9f20a806 # Schmuck
+        -
+          - group
+          - Allgemein
+    -
+      __assoc__:
+        -
+          - uid
           - 90a880c7-9a34-43b7-b7fb-447b47a661ee
         -
           - group

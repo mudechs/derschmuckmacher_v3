@@ -11,7 +11,9 @@
       "Bash(mkcert -install)",
       "Bash(openssl x509:*)",
       "Bash(ddev start:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(composer update:*)",
+      "Bash(composer install:*)"
     ]
   }
 }

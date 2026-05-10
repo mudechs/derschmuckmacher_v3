@@ -194,6 +194,10 @@ a > img.img-thumbnail {
 .nav {
   .nav-item {
     .nav-link {
+      &:hover {
+        color: $black;
+      }
+
       &.active {
         color: $black !important;
       }
@@ -272,7 +276,7 @@ a > img.img-thumbnail {
     font-size: 1.125rem;
 
     h2, .h2 {
-      margin: 2rem 0;
+      margin-bottom: 2rem;
     }
   }
 
