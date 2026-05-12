@@ -1,4 +1,4 @@
-dateModified: 1778419268
+dateModified: 1778571541
 elementSources:
   craft\elements\Asset:
     -
@@ -211,7 +211,7 @@ plugins:
       revokable: ''
       secure_only: ''
       target: _blank
-      type: info
+      type: opt-in
   feed-me:
     edition: standard
     enabled: false
