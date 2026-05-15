@@ -1,4 +1,4 @@
-dateModified: 1778571541
+dateModified: 1778769050
 elementSources:
   craft\elements\Asset:
     -
@@ -175,7 +175,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.0.0.1
+    schemaVersion: 5.6.0.0
   cookie-consent-banner:
     edition: standard
     enabled: true
@@ -326,7 +326,7 @@ system:
   live: true
   name: Schmuckmacher
   retryDuration: null
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.10.0.0
   timeZone: $TIMEZONE
 users:
   allowPublicRegistration: false

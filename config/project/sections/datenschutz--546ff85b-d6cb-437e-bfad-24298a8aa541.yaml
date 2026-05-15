@@ -5,6 +5,7 @@ entryTypes:
     uid: fd7dfe3e-de02-4a2b-b80f-e016cbc6bd83 # Datenschutz
 handle: datenschutz
 maxAuthors: 1
+minAuthors: 1
 name: Datenschutz
 previewTargets:
   -

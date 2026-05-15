@@ -5,6 +5,7 @@ entryTypes:
     uid: cf3a73aa-ee21-4da1-90ed-e13651ad6f09 # Multicontent
 handle: schmuckstuecke
 maxAuthors: 1
+minAuthors: 1
 name: Schmuckstücke
 previewTargets:
   -

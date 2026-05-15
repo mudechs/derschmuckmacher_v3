@@ -5,6 +5,7 @@ entryTypes:
     uid: 2480ed87-7a1b-4d13-969d-d40e69e3750b # Standard
 handle: aktuelles
 maxAuthors: 1
+minAuthors: 1
 name: Aktuelles
 previewTargets:
   -

@@ -5,6 +5,7 @@ entryTypes:
     uid: b1312f5f-cafe-4866-bf92-60ac0b3fb7f4 # Kontakt
 handle: kontakt
 maxAuthors: 1
+minAuthors: 1
 name: Kontakt
 previewTargets:
   -

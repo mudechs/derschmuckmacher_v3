@@ -1,12 +1,12 @@
 {
   "require": {
     "adigital/cookie-consent-banner": "3.1.1",
-    "craftcms/ckeditor": "^5.5.0",
-    "craftcms/cms": "^5.9.23",
+    "craftcms/ckeditor": "^5.6.1",
+    "craftcms/cms": "^5.10.0",
     "ether/seo": "5.0.0",
     "miranj/craft-obfuscator": "1.2.0",
     "putyourlightson/craft-sprig": "3.7.2",
-    "solspace/craft-freeform": "^5.15.10",
+    "solspace/craft-freeform": "^5.15.11",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

@@ -5,6 +5,7 @@ entryTypes:
     uid: 5054e9bf-72d8-4a7e-884b-6180592ab3dd # Impressum
 handle: ueberMich
 maxAuthors: 1
+minAuthors: 1
 name: 'Über mich'
 previewTargets:
   -
