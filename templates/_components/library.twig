@@ -3,7 +3,7 @@
 {% set firstCategory = schmuckTypOptions|first %}
 {% set schmuckTyp = schmuckTyp ?? (firstCategory ? firstCategory.id : '') %}
 {% set currentPage = currentPage ?? 1 %}
-{% set perPage = 10 %}
+{% set perPage = 12 %}
 
 {% set schmuckQuery = craft.entries()
   .section('schmuck')
@@ -69,7 +69,7 @@
       {% if entries %}
         {% for entry in entries %}
           {% set image = entry.schmuckbild.one() %}
-          <div class="col-12 col-lg-6 mb-4">
+          <div class="col-12 col-lg-4 mb-4">
             <a href="{{ entry.url }}" title="{{ entry.title }}" class="position-relative d-block">
               {% if image|length %}
                 <img src="{{ image.url(thumb) }}" width="{{ image.getWidth(thumb) }}" height="{{ image.getHeight(thumb) }}" alt="{{ entry.title }}" class="img-fluid img-thumbnail">
