@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61971a7f4072749db60cd4f459cff3cc",
+    "content-hash": "4dc7ee1de2e283d6f9bc5f2fd8210de5",
     "packages": [
         {
             "name": "adigital/cookie-consent-banner",
@@ -645,11 +645,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.10.0",
+            "version": "5.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a516a6190ba8ef39a7603863df9ae09eb89f3a64",
-                "reference": "a516a6190ba8ef39a7603863df9ae09eb89f3a64",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/90ce464e804d95c996c8b1f382adefecc4c6353b",
+                "reference": "90ce464e804d95c996c8b1f382adefecc4c6353b",
                 "shasum": ""
             },
             "require": {
@@ -748,7 +748,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2026-05-13T16:55:04+00:00"
+            "time": "2026-05-15T00:32:47+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -4978,11 +4978,11 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.15.11",
+            "version": "5.15.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/aa0190095974ad358f50ecd88d1492f8cff42114",
-                "reference": "aa0190095974ad358f50ecd88d1492f8cff42114",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/5d90a7c0f98c7e35ecc11c3e2d45b34b4b8b7894",
+                "reference": "5d90a7c0f98c7e35ecc11c3e2d45b34b4b8b7894",
                 "shasum": ""
             },
             "require": {
@@ -5031,7 +5031,7 @@
                 }
             ],
             "description": "The most flexible and user-friendly form building plugin!",
-            "time": "2026-05-13T15:42:17+00:00"
+            "time": "2026-05-15T17:43:20+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
