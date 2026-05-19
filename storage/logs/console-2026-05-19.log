@@ -1,0 +1,185 @@
+2026-05-19 13:12:24 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2475840} 
+2026-05-19 13:12:24 [console.INFO] [adigital\cookieconsentbanner\CookieConsentBanner::init] Cookie Consent Banner plugin loaded {"memory":4196192} 
+2026-05-19 13:12:24 [console.INFO] [miranj\obfuscator\Obfuscator::init] Obfuscator plugin loaded {"memory":9052016} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":12343816} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396480} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396696} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14778424} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795520} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795736} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14779920} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795080} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795616} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":16992184} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":17041056} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":17041272} 
+2026-05-19 11:14:47 [console.ERROR] [craft\errors\DbConnectException] PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known in /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'db', Object(SensitiveParameterValue), Array)
+#1 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Connection.php(178): yii\db\Connection->open()
+#3 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1066): craft\db\Connection->open()
+#4 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#5 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(401): yii\db\Connection->getSlavePdo(true)
+#6 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(425): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#7 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(58): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#8 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/QueryBuilder.php(29): yii\db\mysql\QueryBuilder->init()
+#9 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\db\mysql\QueryBuilder->init()
+#10 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/QueryBuilder.php(118): yii\base\BaseObject->__construct(Array)
+#11 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/Schema.php(116): yii\db\QueryBuilder->__construct(Object(craft\db\Connection), Array)
+#12 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Schema.php(248): craft\db\mysql\Schema->createQueryBuilder()
+#13 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#14 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#15 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Query->createCommand(Object(craft\db\Connection))
+#16 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs(Object(craft\db\Connection))
+#17 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#18 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(300): craft\db\MigrationManager->getNewMigrations()
+#19 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#20 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#21 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#22 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Controller.php(187): yii\base\Controller->runAction('all', Array)
+#23 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(190): yii\console\Controller->runAction('all', Array)
+#24 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Module.php(547): craft\console\controllers\MigrateController->runAction('all', Array)
+#25 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/all', Array)
+#26 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction('migrate/all', Array)
+#27 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('migrate/all', Array)
+#28 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest(Object(craft\console\Request))
+#29 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Application.php(382): craft\console\Application->handleRequest(Object(craft\console\Request))
+#30 /Users/omar/PhpstormProjects/derschmuckmacher_v3/craft(13): yii\base\Application->run()
+#31 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known in /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=db;d...', 'db', Object(SensitiveParameterValue), Array)
+#1 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(636): yii\db\Connection->createPdoInstance()
+#2 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Connection.php(178): yii\db\Connection->open()
+#3 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1066): craft\db\Connection->open()
+#4 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#5 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(401): yii\db\Connection->getSlavePdo(true)
+#6 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(425): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#7 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(58): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#8 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/QueryBuilder.php(29): yii\db\mysql\QueryBuilder->init()
+#9 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\db\mysql\QueryBuilder->init()
+#10 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/QueryBuilder.php(118): yii\base\BaseObject->__construct(Array)
+#11 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/Schema.php(116): yii\db\QueryBuilder->__construct(Object(craft\db\Connection), Array)
+#12 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Schema.php(248): craft\db\mysql\Schema->createQueryBuilder()
+#13 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#14 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#15 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Query->createCommand(Object(craft\db\Connection))
+#16 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs(Object(craft\db\Connection))
+#17 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#18 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(300): craft\db\MigrationManager->getNewMigrations()
+#19 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#20 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#21 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#22 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Controller.php(187): yii\base\Controller->runAction('all', Array)
+#23 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(190): yii\console\Controller->runAction('all', Array)
+#24 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Module.php(547): craft\console\controllers\MigrateController->runAction('all', Array)
+#25 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/all', Array)
+#26 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction('migrate/all', Array)
+#27 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('migrate/all', Array)
+#28 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest(Object(craft\console\Request))
+#29 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Application.php(382): craft\console\Application->handleRequest(Object(craft\console\Request))
+#30 /Users/omar/PhpstormProjects/derschmuckmacher_v3/craft(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known in /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:647
+Stack trace:
+#0 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Connection.php(178): yii\db\Connection->open()
+#1 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1066): craft\db\Connection->open()
+#2 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#3 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(401): yii\db\Connection->getSlavePdo(true)
+#4 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(425): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#5 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(58): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#6 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/QueryBuilder.php(29): yii\db\mysql\QueryBuilder->init()
+#7 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\db\mysql\QueryBuilder->init()
+#8 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/QueryBuilder.php(118): yii\base\BaseObject->__construct(Array)
+#9 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/Schema.php(116): yii\db\QueryBuilder->__construct(Object(craft\db\Connection), Array)
+#10 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Schema.php(248): craft\db\mysql\Schema->createQueryBuilder()
+#11 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#12 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#13 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Query->createCommand(Object(craft\db\Connection))
+#14 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs(Object(craft\db\Connection))
+#15 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#16 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(300): craft\db\MigrationManager->getNewMigrations()
+#17 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#18 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#19 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#20 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Controller.php(187): yii\base\Controller->runAction('all', Array)
+#21 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(190): yii\console\Controller->runAction('all', Array)
+#22 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Module.php(547): craft\console\controllers\MigrateController->runAction('all', Array)
+#23 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/all', Array)
+#24 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction('migrate/all', Array)
+#25 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('migrate/all', Array)
+#26 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest(Object(craft\console\Request))
+#27 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Application.php(382): craft\console\Application->handleRequest(Object(craft\console\Request))
+#28 /Users/omar/PhpstormProjects/derschmuckmacher_v3/craft(13): yii\base\Application->run()
+#29 {main}
+
+Next craft\errors\DbConnectException: Craft CMS can’t connect to the database. in /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Connection.php:199
+Stack trace:
+#0 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1066): craft\db\Connection->open()
+#1 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(1053): yii\db\Connection->getMasterPdo()
+#2 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(401): yii\db\Connection->getSlavePdo(true)
+#3 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(425): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(58): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/QueryBuilder.php(29): yii\db\mysql\QueryBuilder->init()
+#6 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\db\mysql\QueryBuilder->init()
+#7 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/QueryBuilder.php(118): yii\base\BaseObject->__construct(Array)
+#8 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/mysql/Schema.php(116): yii\db\QueryBuilder->__construct(Object(craft\db\Connection), Array)
+#9 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Schema.php(248): craft\db\mysql\Schema->createQueryBuilder()
+#10 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Schema->getQueryBuilder()
+#11 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Query.php(157): yii\db\Connection->getQueryBuilder()
+#12 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Query->createCommand(Object(craft\db\Connection))
+#13 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs(Object(craft\db\Connection))
+#14 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#15 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(300): craft\db\MigrationManager->getNewMigrations()
+#16 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#17 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#18 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#19 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Controller.php(187): yii\base\Controller->runAction('all', Array)
+#20 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/controllers/MigrateController.php(190): yii\console\Controller->runAction('all', Array)
+#21 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Module.php(547): craft\console\controllers\MigrateController->runAction('all', Array)
+#22 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/all', Array)
+#23 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction('migrate/all', Array)
+#24 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('migrate/all', Array)
+#25 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest(Object(craft\console\Request))
+#26 /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/base/Application.php(382): craft\console\Application->handleRequest(Object(craft\console\Request))
+#27 /Users/omar/PhpstormProjects/derschmuckmacher_v3/craft(13): yii\base\Application->run()
+#28 {main} {"memory":16786392,"exception":"[object] (craft\\errors\\DbConnectException(code: 0): Craft CMS can’t connect to the database. at /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/craftcms/cms/src/db/Connection.php:199)
+[previous exception] [object] (yii\\db\\Exception(code: 2002): SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known at /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:647)
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known at /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:721)
+[previous exception] [object] (PDOException(code: 0): PDO::__construct(): php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known at /Users/omar/PhpstormProjects/derschmuckmacher_v3/vendor/yiisoft/yii2/db/Connection.php:721)"} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":12343824} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396488} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396704} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14778432} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795528} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795744} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14779928} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795088} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795624} 
+2026-05-19 11:14:47 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":16160520} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16213576} 
+2026-05-19 11:14:47 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16213792} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":12343824} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396488} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":12396704} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14778432} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795528} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795744} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":14779928} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795088} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":14795624} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":16660368} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16721816} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16722032} 
+2026-05-19 11:14:48 [console.WARNING] [craft\console\actions\ClearCacheAction::run] Error clearing cache Asset indexing data: Craft CMS can’t connect to the database. {"memory":16739880} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":16662704} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16724792} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16725008} 
+2026-05-19 11:14:48 [console.WARNING] [craft\console\actions\ClearCacheAction::run] Error clearing cache Asset transform index: Craft CMS can’t connect to the database. {"memory":16742856} 
+2026-05-19 11:14:48 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":16667160} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16730384} 
+2026-05-19 11:14:48 [console.ERROR] [craft\db\Connection::open] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: nodename nor servname provided, or not known {"memory":16730600} 
+2026-05-19 11:14:48 [console.WARNING] [craft\console\actions\ClearCacheAction::run] Error clearing cache Control panel resources: Craft CMS can’t connect to the database. {"memory":16749000} 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc7ee1de2e283d6f9bc5f2fd8210de5",
+    "content-hash": "64a9dac9c9c80f830121fabd9b114b65",
     "packages": [
         {
             "name": "adigital/cookie-consent-banner",
@@ -4978,11 +4978,11 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "5.15.12",
+            "version": "5.15.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/5d90a7c0f98c7e35ecc11c3e2d45b34b4b8b7894",
-                "reference": "5d90a7c0f98c7e35ecc11c3e2d45b34b4b8b7894",
+                "url": "https://api.github.com/repos/solspace/craft-freeform/zipball/4309069b8ae893ff7ef5bce78ecbde87e9bd1b27",
+                "reference": "4309069b8ae893ff7ef5bce78ecbde87e9bd1b27",
                 "shasum": ""
             },
             "require": {
@@ -5031,7 +5031,7 @@
                 }
             ],
             "description": "The most flexible and user-friendly form building plugin!",
-            "time": "2026-05-15T17:43:20+00:00"
+            "time": "2026-05-18T23:28:57+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",

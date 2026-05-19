@@ -1,4 +1,4 @@
-dateModified: 1778769050
+dateModified: 1779186538
 elementSources:
   craft\elements\Asset:
     -
@@ -196,14 +196,14 @@ plugins:
       honour_do_not_track_header: ''
       layout: block
       learn: Datenschutz
-      learn_more_link: 'https://dev.derschmuckmacher.ch/datenschutz'
+      learn_more_link: 'https://www.derschmuckmacher.ch/datenschutz'
       message: 'Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzung unserer Website zu ermöglichen.'
       palette: cleanblue
       palette_banner: '252e39'
       palette_banner_text: ffffff
       palette_button: D9544F
       palette_button_text: ffffff
-      palette_left_button_bg: D9544F
+      palette_left_button_bg: a9a9a9
       palette_left_button_text: ffffff
       palette_link: ffffff
       position: bottom-right
