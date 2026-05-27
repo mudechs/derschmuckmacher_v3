@@ -5,7 +5,7 @@
   right: 5px;
   width: 48px;
   height: 48px;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -27,6 +27,10 @@
 }
 
 /* White state over hero image */
+.hamburger-menu.over-hero {
+  background: rgba(185, 158, 119, 0.7);
+}
+
 .hamburger-menu.over-hero .hamburger-bar {
   background-color: #fff;
 }

@@ -9,13 +9,14 @@ settings:
     - title
     - ariaLabel
   availableTransforms: ''
-  availableVolumes: ''
+  availableVolumes:
+    - 856a3aeb-b21b-4d41-af3f-0a23db430323 # Bilder
   characterLimit: null
   css: null
   cssFile: null
   defaultTransform: null
   defaultUploadLocationSubpath: null
-  defaultUploadLocationVolume: null
+  defaultUploadLocationVolume: 856a3aeb-b21b-4d41-af3f-0a23db430323 # Bilder
   fullGraphqlData: true
   headingLevels:
     - '2'
@@ -47,6 +48,7 @@ settings:
     - bulletedList
     - numberedList
     - '|'
+    - insertImage
     - link
     - '|'
     - sourceEditing
