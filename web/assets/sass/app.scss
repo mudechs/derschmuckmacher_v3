@@ -209,6 +209,12 @@ a > img.img-thumbnail {
   padding-top: 78px;
 }
 
+@media (max-width: 991.98px) {
+  .content-top-padding {
+    padding-top: 58px;
+  }
+}
+
 .slide-out {
   transform: translateY(-78px);
   transition: opacity 2s, transform 250ms ease-out;

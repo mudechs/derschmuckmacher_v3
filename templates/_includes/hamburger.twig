@@ -1,4 +1,13 @@
-{# Hamburger Menu Button #}
+{# Mobile Header Bar with Logo (non-homepage) #}
+{% if isMobile and segment_1 != '' %}
+<header class="mobile-header position-fixed top-0 start-0 w-100 bg-white d-flex align-items-center px-3 z-3">
+  <a href="{{ siteUrl }}" title="Home">
+    <img src="{{ alias('@assetBaseUrl/images/logos/logo_lang.svg') }}" alt="Logo" class="mobile-header-logo">
+  </a>
+</header>
+{% endif %}
+
+{# Floating Hamburger Button — always outside header to preserve z-index above modal #}
 <button class="hamburger-menu" type="button" aria-label="Menu" aria-expanded="false">
   <span class="hamburger-bar"></span>
   <span class="hamburger-bar"></span>

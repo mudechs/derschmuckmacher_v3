@@ -1,3 +1,14 @@
+/* Mobile Header Bar */
+.mobile-header {
+  height: 58px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-header-logo {
+  height: auto;
+  width: 240px;
+}
+
 /* Hamburger Button Styles */
 .hamburger-menu {
   position: fixed;
