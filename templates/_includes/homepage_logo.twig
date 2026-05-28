@@ -1,20 +1,29 @@
-<div class="d-flex align-items-center justify-content-center justify-content-lg-start vh-100 z-2">
+<div class="d-flex align-items-center justify-content-start justify-content-lg-start z-2 homepage-logo-wrap">
   <img src="{{ alias('@assetBaseUrl/images/logos/logo_hoch.svg') }}" alt="Logo" class="w-75 w-lg-30 z-2 logo-bg">
 </div>
 
 <style>
+    .homepage-logo-wrap {
+        height: 100dvh;
+    }
+
     .logo-bg {
         background: rgba(0, 0, 0, 0.5);
-        padding: 2rem;
+        padding: 1rem;
     }
 
     @media (min-width: 768px) {
-        .w-lg-30 {
-            width: 30% !important;
+        .homepage-logo-wrap {
+            height: 100vh;
+            padding-left: 80px;
         }
 
-        .vh-100 {
-            padding-left: 80px !important;
+        .logo-bg {
+            padding: 2rem;
+        }
+
+        .w-lg-30 {
+            width: 30% !important;
         }
     }
 </style>
