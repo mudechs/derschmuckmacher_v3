@@ -1,8 +1,13 @@
 <div class="d-flex align-items-center justify-content-center justify-content-lg-start vh-100 z-2">
-  <img src="{{ alias('@assetBaseUrl/images/logos/logo_hoch.svg') }}" alt="Logo" class="w-75 w-lg-30 z-2">
+  <img src="{{ alias('@assetBaseUrl/images/logos/logo_hoch.svg') }}" alt="Logo" class="w-75 w-lg-30 z-2 logo-bg">
 </div>
 
 <style>
+    .logo-bg {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+    }
+
     @media (min-width: 768px) {
         .w-lg-30 {
             width: 30% !important;
